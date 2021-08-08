@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
 COPY requirements/common.txt requirements/common.txt
 RUN pip install -U pip && pip install -r requirements/common.txt
