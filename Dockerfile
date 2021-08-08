@@ -8,6 +8,9 @@ COPY ./bin /app/bin
 COPY wsgi.py /app/wsgi.py
 WORKDIR /app
 
+RUN useradd demo
+USER demo
+
 EXPOSE 8080
 
-ENTRYPOINT [ "bash", "/app/bin/run.sh" ]
+ENTRYPOINT ["bash", "/app/bin/run.sh"]
